@@ -8,7 +8,7 @@ import { ProductUpdatedListener } from './events/listener/product-updated-listen
 import { natsWrapper } from './nats-wrapper';
 
 const start = async () => {
-  console.log('Starting up orders service...');
+  console.log('[ORDERS SERVICE] Starting..');
   if (!process.env.JWT_KEY) {
     throw new Error('JWT_KEY must be defined');
   }
