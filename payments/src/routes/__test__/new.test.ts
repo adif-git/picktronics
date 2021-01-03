@@ -76,7 +76,7 @@ it('return a 201 with valid input', async () => {
       token: 'tok_visa',
       orderId: order.id,
     })
-    .expect(404);
+    .expect(201);
 
   const stripeCharges = await stripe.charges.list({ limit: 50 });
   const stripeCharge = stripeCharges.data.find((charge) => {
