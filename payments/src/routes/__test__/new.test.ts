@@ -67,7 +67,7 @@ it('return a 201 with valid input', async () => {
     price,
     status: OrderStatus.Created,
   });
-  await order.save();
+  // await order.save();
 
   await request(app)
     .post('/api/payments')
