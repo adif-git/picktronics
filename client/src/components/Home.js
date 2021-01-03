@@ -55,7 +55,7 @@ class Home extends React.Component {
             <div className="ui hidden divider"></div>
             <div className="ui header">
               <h1 className="ui header">PICKTRONICS</h1>
-              <h2>Your electronics exchange marketplace!</h2>
+              <h2>Your Electronics Exchange Marketplace!</h2>
             </div>
           </div>
           <div className="ui hidden divider"></div>
