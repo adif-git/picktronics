@@ -12,6 +12,8 @@ declare global {
 
 jest.mock('../nats-wrapper');
 
+// For local test development using "setEnvVars.ts" file for stripe key
+// For github actions using secrets from env repo
 try {
   const { STRIPE_KEY } = require('./setEnvVars');
   process.env.STRIPE_KEY = STRIPE_KEY;
