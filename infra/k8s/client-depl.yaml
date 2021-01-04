@@ -16,11 +16,11 @@ spec:
         - name: client
           image: adif9710/picktronics-client
           env:
-            - name: STRIPE_PB_KEY
+            - name: REACT_APP_STRIPE_PB_KEY
               valueFrom:
                 secretKeyRef:
-                  name: stripe-pb-key
-                  key: STRIPE_PB_KEY
+                  name: react-app-stripe-pb-key
+                  key: REACT_APP_STRIPE_PB_KEY
 ---
 apiVersion: v1
 kind: Service

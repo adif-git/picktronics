@@ -139,7 +139,7 @@ const OrderShow = (props) => {
           <div className="ui hidden divider"></div>
           <StripeCheckout
             token={({ id }) => handlePayment(id)}
-            stripeKey={process.env.STRIPE_PB_KEY}
+            stripeKey={process.env.REACT_APP_STRIPE_PB_KEY}
             amount={product.price * 100}
             email={email}
             className={`large ui button ${
