@@ -17,7 +17,7 @@ class SignIn extends React.Component {
     return (
       <div className="ui container">
         <div className="ui hidden divider"></div>
-        <h1 className="ui blue header">SIGN IN</h1>
+        <h1 className="ui violet header">SIGN IN</h1>
         <p>
           Doesn't have an account yet? <Link to="/auth/signup">Sign Up</Link>
         </p>
