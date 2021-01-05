@@ -49,12 +49,11 @@ class Home extends React.Component {
       <>
         <div
           className="ui vertical masthead center aligned segment"
-          style={{ padding: '100px 0px' }}
+          style={{ background: '#0b132b', opacity: '0.95' }}
         >
-          <div className="ui text container">
-            <div className="ui hidden divider"></div>
-            <div className="ui header">
-              <h1 className="ui header">PICKTRONICS</h1>
+          <div className="ui text container" style={{ padding: '100px 0' }}>
+            <div className="ui header" style={{ color: '#fefcfb' }}>
+              <h1>PICKTRONICS</h1>
               <h2>Your Electronics Exchange Marketplace!</h2>
             </div>
           </div>

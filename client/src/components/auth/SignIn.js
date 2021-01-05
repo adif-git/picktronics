@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { signIn, authBegin } from '../../actions';
 import AuthForm from './AuthForm';
 
@@ -16,7 +17,10 @@ class SignIn extends React.Component {
     return (
       <div className="ui container">
         <div className="ui hidden divider"></div>
-        <h1 className="ui header">SIGN IN</h1>
+        <h1 className="ui blue header">SIGN IN</h1>
+        <p>
+          Doesn't have an account yet? <Link to="/auth/signup">Sign Up</Link>
+        </p>
         <AuthForm onSubmit={this.onSubmit} error={this.props.error} />
       </div>
     );
