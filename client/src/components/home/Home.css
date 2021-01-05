@@ -1,0 +1,8 @@
+.ui.masthead.segment {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./homepage.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  width: 100% !important;
+}
