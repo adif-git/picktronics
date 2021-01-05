@@ -20,7 +20,7 @@ build:
     - image: adif9710/picktronics-client
       context: client
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: '**/*.js'
