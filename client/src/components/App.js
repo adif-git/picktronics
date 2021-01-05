@@ -6,7 +6,7 @@ import { currentUser } from '../actions';
 import Header from './Header';
 import history from '../history';
 
-import Home from './Home';
+import Home from './home/Home';
 import SignUp from './auth/SignUp';
 import SignIn from './auth/SignIn';
 import Profile from './profile/Profile';

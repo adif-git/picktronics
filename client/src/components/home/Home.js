@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchProducts } from '../actions';
-import Loader from './Loader';
+import { fetchProducts } from '../../actions';
+import Loader from '../Loader';
+import './Home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -47,17 +48,13 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div
-          className="ui vertical masthead center aligned segment"
-          style={{ background: '#0b132b', opacity: '0.95' }}
-        >
+        <div className="ui vertical masthead center aligned segment">
           <div className="ui text container" style={{ padding: '100px 0' }}>
             <div className="ui header" style={{ color: '#fefcfb' }}>
               <h1>PICKTRONICS</h1>
               <h2>Your Electronics Exchange Marketplace!</h2>
             </div>
           </div>
-          <div className="ui hidden divider"></div>
         </div>
         <div className="ui hidden divider"></div>
         <div className="ui container">

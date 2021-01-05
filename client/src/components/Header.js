@@ -9,7 +9,7 @@ const Header = (props) => {
       <>
         <div className="item">
           <div className="ui tiny buttons">
-            <Link to="/auth/signin" className="ui blue button">
+            <Link to="/auth/signin" className="ui violet button">
               Sign In
             </Link>
             <div className="or"></div>
