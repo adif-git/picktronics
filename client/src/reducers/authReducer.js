@@ -1,12 +1,11 @@
 import {
   AUTH_BEGIN,
-  SIGN_UP_SUCCESS,
-  SIGN_UP_ERROR,
-  SIGN_IN_SUCCESS,
-  SIGN_IN_ERROR,
   SIGN_OUT,
+  SIGN_IN,
+  SIGN_UP,
   CURRENT_USER,
 } from '../actions/types';
+import _ from 'lodash';
 
 const INITIAL_STATE = {
   isSignedIn: false,
@@ -21,9 +20,8 @@ const authReducer = (state = INITIAL_STATE, action) => {
         ...state,
         error: [],
       };
-
     case CURRENT_USER:
-      if (action.payload === null) {
+      if (action.data === null) {
         return {
           ...state,
           isSignedIn: false,
@@ -34,44 +32,32 @@ const authReducer = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           isSignedIn: true,
-          user: action.payload,
+          user: action.data,
           error: [],
         };
       }
-
-    // ====================== SIGN UP REDUCERS ===============================
-    case SIGN_UP_SUCCESS:
-      return {
-        ...state,
-        isSignedIn: true,
-        user: { ...action.payload },
-        error: [],
-      };
-    case SIGN_UP_ERROR:
-      return {
-        ...state,
-        isSignedIn: false,
-        user: {},
-        error: action.error,
-      };
-
-    // ====================== SIGN IN REDUCERS ===============================
-    case SIGN_IN_SUCCESS:
-      return {
-        ...state,
-        isSignedIn: true,
-        user: { ...action.payload },
-        error: [],
-      };
-    case SIGN_IN_ERROR:
-      return {
-        ...state,
-        isSignedIn: false,
-        user: {},
-        error: action.error,
-      };
-
-    // ====================== SIGN OUT REDUCERS ===============================
+    case SIGN_UP:
+      if (!_.has(action.data, 'errors')) {
+        return { ...state, isSignedIn: true, user: action.data, error: [] };
+      } else {
+        return {
+          ...state,
+          isSignedIn: false,
+          user: {},
+          error: action.data.errors,
+        };
+      }
+    case SIGN_IN:
+      if (!_.has(action.data, 'errors')) {
+        return { ...state, isSignedIn: true, user: action.data, error: [] };
+      } else {
+        return {
+          ...state,
+          isSignedIn: false,
+          user: {},
+          error: action.data.errors,
+        };
+      }
     case SIGN_OUT:
       return {
         ...state,
