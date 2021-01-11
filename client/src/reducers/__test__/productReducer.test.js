@@ -39,7 +39,7 @@ const error = {
   ],
 };
 
-it('should handle FETCH_PRODUCT if product defined', () => {
+it('should handle FETCH_PRODUCT if product exist', () => {
   expect(
     reducer([], {
       type: FETCH_PRODUCT,
@@ -51,7 +51,7 @@ it('should handle FETCH_PRODUCT if product defined', () => {
   });
 });
 
-it('should handle FETCH_PRODUCT if product error', () => {
+it('should handle FETCH_PRODUCT if product not exist', () => {
   expect(
     reducer([], {
       type: FETCH_PRODUCT,
@@ -87,7 +87,7 @@ it('should handle CREATE_PRODUCT if product error', () => {
   });
 });
 
-it('should handle UPDATE_PRODUCT if product defined', () => {
+it('should handle UPDATE_PRODUCT if product exist', () => {
   expect(
     reducer([], {
       type: UPDATE_PRODUCT,
