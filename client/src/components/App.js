@@ -19,7 +19,7 @@ import OrderUser from './orders/OrderUser';
 import GenericNotFound from './GenericNotFound';
 
 import PrivateRoute from '../hocs/PrivateRoute';
-import UnPrivateRoute from '../hocs/UnPrivateRoute';
+import PublicRoute from '../hocs/PublicRoute';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,13 +47,13 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
 
-          <UnPrivateRoute
+          <PublicRoute
             exact
             path="/auth/signup"
             isSignedIn={this.props.isSignedIn}
             component={SignUp}
           />
-          <UnPrivateRoute
+          <PublicRoute
             exact
             path="/auth/signin"
             isSignedIn={this.props.isSignedIn}
